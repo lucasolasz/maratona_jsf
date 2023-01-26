@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
@@ -18,6 +19,13 @@ public class TesteSessionBean implements Serializable{
 	
 	private List<String> personagens = Arrays.asList("Goku", "Vegeta", "Gohan");
 	private List<String> personagemSelecionado = new ArrayList<>();
+	
+	@PostConstruct
+	public void init() {
+		System.out.println("Entrou no PostConstruct do SessionScoped");
+		personagens = Arrays.asList("Goku", "Vegeta", "Gohan");
+	}
+	
 	
 	public void selecionarPersonagem() {
 		int index = ThreadLocalRandom.current().nextInt(3);
