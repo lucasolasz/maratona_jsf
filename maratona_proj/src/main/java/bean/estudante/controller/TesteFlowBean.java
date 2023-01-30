@@ -15,13 +15,13 @@ public class TesteFlowBean implements Serializable{
 	private String sobrenome;
 	private String endereco;
 	
-	public String salvar() {
+	public void salvar() {
 		
-		System.out.println("Salvando nome");
-		System.out.println("Salvando sobrenome");
-		System.out.println("Salvando endereco");
+		System.out.println("Salvando nome " + nome);
+		System.out.println("Salvando sobrenome " + sobrenome);
+		System.out.println("Salvando endereco " + endereco);
 		
-		return "exitToInicio";
+//		return "exitToInicio";
 	}
 	
 	

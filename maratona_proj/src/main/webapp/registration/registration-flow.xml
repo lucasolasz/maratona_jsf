@@ -8,6 +8,8 @@
 		<flow-return id="exitToInicio">
 			<from-outcome>/inicioflow.xhtml</from-outcome>
 		</flow-return>
+		<finalizer>#{testeFlowBean.salvar}</finalizer>
 	</flow-definition>
+	
 
 </faces-config>
